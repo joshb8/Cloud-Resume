@@ -102,11 +102,6 @@ Resources:
             TableName: cloud-resume-challenge
       CodeUri: get-function/
       Handler: app.lambda_handler
-      iamRoleStatements:
-    - Effect: Allow
-      Action:
-       - lambda: "*"
-      Resource: "*"
       Architectures:
         - x86_64
       Events:
