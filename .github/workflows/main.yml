@@ -33,7 +33,7 @@ jobs:
         with:
           aws-access-key-id: AKIA4KSCVS23J4LM7XDR 
           aws-secret-access-key: 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 
-          aws-region: us-north-1
+          aws-region: us-east-1
       - run: aws s3 sync ./resume-site s3://my-cloud-resume-website
   
   integration-test-backend:
