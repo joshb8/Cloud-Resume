@@ -1,5 +1,5 @@
 const puppeteer = require('puppeteer');
-const  { DOMAIN_NAME } = "joshscloudresume.net";
+const { DOMAIN_NAME } = require('../config.json');
 
 const sleep = async (r) => await new Promise(r => setTimeout(r, 2000));
 
