@@ -10,10 +10,10 @@ deploy-infra:
 	sam build && aws-vault exec sam-user --no-session -- sam deploy
 
 deploy-site:
-	aws-vault exec sam-user --no-session -- aws s3 sync ./website s3://myprofile.cloudofthings.net
+	aws-vault exec sam-user --no-session -- aws s3 sync ./website s3://joshscloudresume.net
 
 invoke-put:
-	sam build && aws-vault exec sam-user --no-session -- sam local invoke PutCountFunction
+	sam build && aws-vault exec sam-user --no-session -- sam local invoke put-function
 
 integration-test:
 	FIRST=$$(curl -s " https://3xm01hf4y8.execute-api.us-east-1.amazonaws.com/Prod/get" | jq ".body| tonumber"); \
