@@ -51,4 +51,4 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 14
-      - run: cd cloud-resume-challenge/tests/end-to-end-test && npm install && node index.js
+      - run: cd Cloud-resume-Challenge/cloud-resume-challenge/tests/end-to-end-test && npm install && node index.js
