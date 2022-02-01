@@ -1,5 +1,5 @@
 const puppeteer = require('puppeteer');
-const { DOMAIN_NAME } = require('../config.json');
+const { DOMAIN_NAME } = 'joshscloudresume.net';
 
 const sleep = async (r) => await new Promise(r => setTimeout(r, 2000));
 
@@ -14,7 +14,7 @@ const sleep = async (r) => await new Promise(r => setTimeout(r, 2000));
     const element = await page.$("#body")
     const property = await element.getProperty('innerHTML');
     const count = await property.jsonValue();
-    console.log(`Getting page element, count: ${data}`)
+    console.log(`Getting page element, count: ${count}`)
     if (!count) {
         throw new Error("Cannot find count value")
     } else {
